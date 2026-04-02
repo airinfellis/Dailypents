@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Dailypents</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <h1>Dailypents</h1>
+
+    <form class="search-box" onsubmit="return false;">
+        <span>🔍</span>
+        <input type="text" id="searchinput" placeholder="Cari produk...">
+    </form>
+
+    <button onclick="toggleCart()">🛒 (<span id="cartCount">0</span>)</button>
+</header>
+
+<!-- NAV MENU  --> 
+<nav class="nav-menu">
+    <a href="index.html" class="nav-item active">About</a>
+    <a href="produk.html" class="nav-item">Produk</a>
+    <a href="kontak.html" class="nav-item">Kontak</a> 
+</nav>
+<!-- KONTAK -->
+ <section class="kontak" id="kontak">
+  <h2>Hubungi Kami</h2>
+  <p>Punya pertanyaan atau mau order cepat?  
+     Hubungi kami lewat kontak di bawah ini.</p>
+
+  <div class="kontak-box">
+    <a href="https://wa.me/6288983531668" target="_blank">📱 WhatsApp</a>
+    <a href="https://instagram.com/dailypents" target="_blank">📸 Instagram</a>
+    <a href=" mailto:airin.fellis23@smk.beljar.id">📧 Email</a>
+  </div>
+</section>
+
+<!-- KERANJANG -->
+<div class="cart" id="cart">
+  <h2>Keranjang</h2>
+
+  <ul id="cartItems"></ul>
+
+  <p>Total: Rp <span id="total">0</span></p>
+
+  <button class="cart-btn" onclick="checkout()">Checkout</button>
+  <button class="cart-btn close-btn" onclick="toggleCart()">Tutup</button>
+</div>
+<!-- FOOTER -->
+<footer class="footer" id="footer">
+    <div class="footer-container">
+
+        <div class="footer-box">
+            <h3>Dailypents</h3>
+            <p>
+                Toko celana estetik dan kekinian.  
+                Nyaman dipakai, stylish, dan cocok untuk daily outfit.
+            </p>
+        </div>
+
+        <div class="footer-box">
+            <h3>Menu</h3>
+            <ul>
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#produk">Produk</a></li>
+                <li><a href="#">Promo</a></li>
+                <li><a href="#">Kontak</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-box">
+            <h3>Hubungi Kami</h3>
+            <p>📸 Instagram: @dailypents</p>
+            <p>📱 WhatsApp: 0889-8353-1668</p>
+            <p>📧 Email: dailypents@gmail.com</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Dailypents • All Rights Reserved
+    </div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/6288983531668" class="wa-float" target="_blank" aria-label="Chat WhatsApp">
+    <svg viewBox="0 0 32 32" width="28" height="28" fill="white">
+        <path d="M19.11 17.36c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.15-.42-2.19-1.35-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.42.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.48-.84-2.03-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.3s.98 2.67 1.11 2.86c.14.18 1.93 2.95 4.68 4.13.65.28 1.16.45 1.56.58.65.21 1.25.18 1.72.11.52-.08 1.6-.65 1.83-1.27.23-.62.23-1.15.16-1.27-.07-.11-.25-.18-.52-.32z"/>
+        <path d="M16.02 3C9.38 3 4 8.38 4 15.02c0 2.65.86 5.09 2.32 7.07L4 29l7.12-2.28a11.96 11.96 0 004.9 1.04c6.63 0 12.01-5.38 12.01-12.02C28.03 8.38 22.65 3 16.02 3zm0 21.86c-1.58 0-3.11-.41-4.45-1.19l-.32-.19-4.22 1.35 1.38-4.11-.21-.33a9.89 9.89 0 01-1.52-5.32c0-5.48 4.46-9.94 9.94-9.94s9.94 4.46 9.94 9.94-4.46 9.94-9.94 9.94z"/>
+    </svg>
+</a>
+
+
+<script src="script.js" defer></script>
+</body>
+</html>
+
